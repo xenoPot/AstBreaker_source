@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// 1秒アニメーション固定のフェード処理
+/// フェード処理
 /// 完了時コールバックなどは付けてないのでフェードイン・アウト完了が欲しかったら改めて追加する必要あり
 /// </summary>
 public class Fade : MonoBehaviour
