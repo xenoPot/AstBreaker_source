@@ -3,24 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ロックオン・レーザー射出処理
+/// ロックオン～レーザー射出処理
+/// </summary>
 public class LockonCtrl : MonoBehaviour
 {
+    /// <summary>
+    /// 隕石ファクトリ
+    /// </summary>
     [SerializeField]
     private AsteroidFactory _astFactory;
+    /// <summary>
+    /// 1ロックオン完了に必要な時間
+    /// </summary>
     [SerializeField]
     private float _lockonTime;
     private float _nowLockonTime;
+    /// <summary>
+    /// 射出するレーザーオブジェクト
+    /// </summary>
     [SerializeField]
     private Laser _laser;
+    /// <summary>
+    /// プレイヤー
+    /// </summary>
     [SerializeField]
     private PlayerCtrl _player;
+    /// <summary>
+    /// レーザーの最大合計存在可能数
+    /// </summary>
     [SerializeField]
     private int _maxBullet = 100;
     private bool _isCharge;
 
     private HashSet<Asteroid> _targets;
 
+    /// <summary>
+    /// ロックオン中の隕石一覧
+    /// </summary>
     public HashSet<Asteroid> Targets
     {
         get
@@ -29,6 +48,9 @@ public class LockonCtrl : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// レーザーの最大合計存在可能数
+    /// </summary>
     public int MaxBullet
     {
         get
