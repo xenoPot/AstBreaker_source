@@ -9,7 +9,6 @@ public class AutoRotate : MonoBehaviour
 {
     private Rigidbody _rigidBody;
 
-    // Use this for initialization
     private void Start()
     {
         _rigidBody = this.GetComponent<Rigidbody>();

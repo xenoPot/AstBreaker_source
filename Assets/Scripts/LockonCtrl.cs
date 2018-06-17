@@ -64,7 +64,6 @@ public class LockonCtrl : MonoBehaviour
         _targets = new HashSet<Asteroid>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (_player.Energy <= 0) { return; }
